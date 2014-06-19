@@ -1,0 +1,56 @@
+Single Final Lite is designed to make the process of scrutinizing the final 
+round of various dance competitions quicker and easier.
+
+NOTE: We recommend setting up the save file location first. To do this
+      please select File, then choose the option Set Save File. After the 
+      save file has been set, the print save button will continue to use the
+      specified location until a different save file has been set.
+
+COMPONENTS:
+
+File Tab: Click on this icon to access the "Set Save File" option,
+          where the target file for the calculated results is 
+          designated. Before saving, it is necessary to set the 
+          save file location and name.
+
+Heat Tabs: The Age, Dance Style, Level, Number of Judges, 
+           Number of Couples, and A-B tabs are drop-down 
+           menus allowing you to set their respective values
+           for the current heat. The only two that are required
+           to continue are the Number of Judges and the Number
+           of Couples.
+
+Generate Table: Once the heat information has been entered 
+                into the Heat Tabs, clicking on this button will
+                create a table on the upper-right section of the
+                window where the judges' placements scores can 
+                be entered. Pressing 'enter' will iterate through 
+                the table for ease of use. Pressing enter in the last 
+                field of the table will take the user directly to 
+                the calculate button.
+
+Calculate: Click on this button to calculate the placements for 
+           each couple based on the scored entered into the 
+           generated table. If any values in the table are 
+           incorrect (such as duplicate couple numbers or couple 
+           numbers longer than 3 digits), these squares in the 
+           table will be highlighted in red.
+
+Display Field: This is the white area on the bottom half on the 
+               window. Once all of the scores have been entered 
+               and the calculate button has been clicked, the
+	       calculation table, the couple placements, and all
+               of the heat information will be visible here.
+
+Clear: Click on this button to clear all heat settings. Because 
+       most competitions have the same number of couples and
+       judges throughout the day, those numbers will remain 
+       the same unless changed by the user.
+
+Save and Print: Save the calculated results and table to a file. The "Set
+                Save File" option on the top right must first be set before
+                saving can be performed. The scores will be saved first and 
+                then the print options will display. You may cancel the print 
+                portion of the process without harming the saved results. 
+      NOTE: (Print functionality is not fully functional at this time. 
+             The display will update in the case of a print failure.)

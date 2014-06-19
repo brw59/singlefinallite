@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color:lightgrey;&#10;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="singlefinallite.desktop.AboutController">
+  <children>
+    <ImageView fx:id="logoHolder" fitHeight="149.74990000000253" fitWidth="199.66653841959632" layoutX="15.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color:white;" />
+    <Label layoutX="248.0" layoutY="43.0" text="SingleFinal Lite" />
+    <Label layoutX="252.0" layoutY="75.0" text="version 1.4.3" />
+    <Label layoutX="223.0" layoutY="117.0" text="Created by: Team Rocket" />
+    <Label layoutX="253.0" layoutY="138.0" text="Adam Harris" />
+    <Label layoutX="248.0" layoutY="154.0" text="Chris Vergeray" />
+    <Label layoutX="250.0" layoutY="170.0" text="Kyle DeWeese" />
+    <Label layoutX="260.0" layoutY="210.0" text="Dec. 2013" />
+  </children>
+</AnchorPane>

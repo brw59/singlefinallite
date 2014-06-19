@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="-1.0" maxWidth="-1.0" 
+            minHeight="700.0" minWidth="650.0" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            xmlns="http://javafx.com/javafx/2.2" 
+            fx:controller="singlefinallite.desktop.MainController">
+  <children>
+    <Pane fx:id="mainarea" maxHeight="1.7976931348623157E308" 
+          maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" 
+          prefHeight="-1.0" prefWidth="-1.0" 
+          style="-fx-background-color: lightgrey;" AnchorPane.bottomAnchor="0.0" 
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-20.0" 
+          AnchorPane.topAnchor="0.0">
+      <children>
+        <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="-1.0">
+          <menus>
+            <Menu mnemonicParsing="true" text="_File">
+              <items>
+                <MenuItem mnemonicParsing="true" onAction="#setSave" 
+                          text="_Set Save File" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="true" text="_Help">
+              <items>
+                <MenuItem mnemonicParsing="true" text="How To" 
+                          onAction="#handleHelp"/>
+                <MenuItem mnemonicParsing="true" text="About"  
+                          onAction="#handleAbout"/>
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <Button layoutX="175.0" layoutY="217.0" mnemonicParsing="true" 
+                onAction="#handleAcceptButton" text="_Generate Table" />
+        <HBox fx:id="judgesBox" layoutX="365.0" layoutY="25.0" prefHeight="10.0" 
+              prefWidth="200.0" />
+        <VBox fx:id="placementBox" layoutX="335.0" layoutY="45.0" 
+              prefHeight="200.0" prefWidth="25.0" />
+        <Button fx:id= "calculateButton" layoutX="552.0" layoutY="306.0" 
+                mnemonicParsing="true" onAction="#handleCalcButton" 
+                text="_Calculate" visible="true" />
+        <Button layoutX="525.0" layoutY="670.0" mnemonicParsing="true" 
+                onAction="#handleSaveandPrint" text="_Save and Print" />
+        <Button layoutX="25.0" layoutY="670.0" mnemonicParsing="true" 
+                onAction="#handleClear" prefWidth="62.0" text="C_lear" />
+        <TextArea fx:id="output" layoutX="16.0" layoutY="340.0" 
+                  maxHeight="315.0" maxWidth="615.0" prefHeight="315.0" 
+                  prefWidth="615.0"
+                  style="-fx-background-color:white;-fx-font-family: monospace;" 
+                  text="" />
+        <GridPane layoutX="25.0" layoutY="51.0" prefHeight="153.9609375" 
+                  prefWidth="300.0">
+          <children>
+            <ChoiceBox fx:id="age" GridPane.columnIndex="1" 
+                       GridPane.rowIndex="0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="--" />
+                  <String fx:value="Peewee" />
+                  <String fx:value="Preteen" />
+                  <String fx:value="Junior" />
+                  <String fx:value="Youth" />
+                  <String fx:value="Collegiate" />
+                  <String fx:value="Adult" />
+                  <String fx:value="Senior" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="dance" GridPane.columnIndex="1" 
+                       GridPane.rowIndex="1">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="--" />
+                  <String fx:value="International Standard(IS)" />
+                  <String fx:value="IS--Quickstep" />
+                  <String fx:value="IS--Slow Foxtrot" />
+                  <String fx:value="IS--Tango" />
+                  <String fx:value="IS--Viennese Waltz" />
+                  <String fx:value="IS--Waltz" />
+                  <String fx:value="International Latin(IL)" />
+                  <String fx:value="IL--Cha Cha" />
+                  <String fx:value="IL--Jive" />
+                  <String fx:value="IL--Paso Doble" />
+                  <String fx:value="IL--Rumba" />
+                  <String fx:value="IL--Samba" />
+                  <String fx:value="American Smooth(AS)" />
+                  <String fx:value="AS--Foxtrot" />
+                  <String fx:value="AS--Tango" />
+                  <String fx:value="AS--Viennese Waltz" />
+                  <String fx:value="AS--Waltz" />
+                  <String fx:value="American Rhythm(AR)" />
+                  <String fx:value="AR--Bolero" />
+                  <String fx:value="AR--Cha Cha" />
+                  <String fx:value="AR--East Coast Swing" />
+                  <String fx:value="AR--Mambo" />
+                  <String fx:value="AR--Rumba" />
+                  <String fx:value="Other" />
+                  <String fx:value="Cabaret" />
+                  <String fx:value="Salsa" />
+                  <String fx:value="NY Hustle" />
+                  <String fx:value="Lindy" />
+                  <String fx:value="Swing" />
+                  <String fx:value="Two Step" />
+                  <String fx:value="West Coast Swing" />
+                  <String fx:value="Bonus Swing" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="level" GridPane.columnIndex="1" 
+                       GridPane.rowIndex="2">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="--" />
+                  <String fx:value="Newcomer" />
+                  <String fx:value="Bronze" />
+                  <String fx:value="Silver 1" />
+                  <String fx:value="Silver 2" />
+                  <String fx:value="Gold 1" />
+                  <String fx:value="Gold 2" />
+                  <String fx:value="Open" />
+                  <String fx:value="Bonus" />
+                  <String fx:value="Novice" />
+                  <String fx:value="Pre-Champion" />
+                  <String fx:value="Champion" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="judges" GridPane.columnIndex="1" 
+                       GridPane.rowIndex="3">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="3" />
+                  <String fx:value="5" />
+                  <String fx:value="7" />
+                  <String fx:value="9" />
+                  <String fx:value="11" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="couples" GridPane.columnIndex="1" 
+                       GridPane.rowIndex="4">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="1" />
+                  <String fx:value="2" />
+                  <String fx:value="3" />
+                  <String fx:value="4" />
+                  <String fx:value="5" />
+                  <String fx:value="6" />
+                  <String fx:value="7" />
+                  <String fx:value="8" />
+                  <String fx:value="9" />
+                  <String fx:value="10" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="ab" prefWidth="52.0" GridPane.columnIndex="1" 
+                       GridPane.rowIndex="5">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="--" />
+                  <String fx:value="A" />
+                  <String fx:value="B" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <Label text="Age" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Dance Style" GridPane.columnIndex="0" 
+                   GridPane.rowIndex="1" />
+            <Label text="Level" GridPane.columnIndex="0" 
+                   GridPane.rowIndex="2" />
+            <Label text="Number of Judges" GridPane.columnIndex="0" 
+                   GridPane.rowIndex="3" />
+            <Label text="Number of Couples" GridPane.columnIndex="0" 
+                   GridPane.rowIndex="4" />
+            <Label text="A-B" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" 
+                               prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" 
+                               prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" 
+                            vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" 
+                            vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" 
+                            vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" 
+                            vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" 
+                            vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" 
+                            vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
