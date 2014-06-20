@@ -8,7 +8,3 @@ public class Singlefinallite
       singlefinallite.desktop.SingleFinalLite.main(args);
    }
 }
-
-// delete this
-
-// new function
