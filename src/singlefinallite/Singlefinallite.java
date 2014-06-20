@@ -8,5 +8,3 @@ public class Singlefinallite
       singlefinallite.desktop.SingleFinalLite.main(args);
    }
 }
-
-// I like to eat potatoes
